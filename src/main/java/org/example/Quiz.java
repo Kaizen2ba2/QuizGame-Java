@@ -23,7 +23,8 @@ public class Quiz implements ActionListener {
     char[] answers = {
             'A',
             'B',
-            'C'
+            'C',
+            'D'
     };
 
     char guess;
@@ -55,6 +56,28 @@ public class Quiz implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(650, 650);
         frame.getContentPane().setBackground(new Color(50, 50, 50));
+        frame.setLayout(null);
+        frame.setResizable(false);
+
+        textField.setBounds(0, 0, 650, 50);
+        textField.setBackground(new Color(25, 25, 25));
+        textField.setForeground(new Color(25, 200, 0));
+        textField.setFont(new Font("Ink Free", Font.BOLD, 30));
+        textField.setBorder(BorderFactory.createBevelBorder(1));
+        textField.setHorizontalAlignment(JTextField.CENTER);
+        textField.setEditable(false);
+
+        textArea.setBounds(0, 0, 650, 50);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        textArea.setFont(new Font("MV Boli", Font.BOLD, 25));
+        textArea.setBorder(BorderFactory.createBevelBorder(1));
+        textArea.setEditable(false);
+
+
+
+        frame.add(textArea);
+        frame.add(textField);
         frame.setVisible(true);
 
     }
